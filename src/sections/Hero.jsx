@@ -7,7 +7,7 @@ import { arrowRight } from "../assets/icons";
 
 const Hero = () => {
   const [bigShoeImg, setBigShoeImg] = useState(bigShoe1);
-
+  //I am trying to commit changes
   return (
     <section
       id='home'
