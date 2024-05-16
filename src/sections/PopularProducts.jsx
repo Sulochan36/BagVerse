@@ -1,7 +1,18 @@
 import { products } from "../constants";
-import { PopularProductCard } from "../components";
+import { Button, PopularProductCard } from "../components";
+import { useNavigate } from "react-router-dom";
+
 
 const PopularProducts = () => {
+  const navigate = useNavigate();
+
+  const gotToExplorePage = () => {
+    navigate("/explore");
+  }
+
+
+
+
   return (
     <section id='products' className='max-container max-sm:mt-12'>
       <div className='flex flex-col justify-start gap-5'>
@@ -18,6 +29,9 @@ const PopularProducts = () => {
         {products.map((product) => (
           <PopularProductCard key={product.name} {...product} />
         ))}
+      </div>
+      <div className="mt-8">
+        <Button onClick={() => navigate("/explore")} label="Explore More" />
       </div>
     </section>
   );

@@ -22,6 +22,7 @@ import thumbnailShoe2 from './thumbnail-shoe2.svg'
 import thumbnailShoe3 from './thumbnail-shoe3.svg'
 
 import logoTrans from './logoTrans.png';
+import logo from './logo.png';
 
 export {
     bigShoe1,
@@ -47,4 +48,5 @@ export {
     thumbnailShoe3,
 
     logoTrans,
+    logo,
 }

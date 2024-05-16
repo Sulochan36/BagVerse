@@ -8,6 +8,7 @@ const Button = ({
     hoverColor,
     hTextColor,
     hBorderColor,
+    onClick,
 }) => {
     return (
         <button
@@ -17,11 +18,12 @@ const Button = ({
                     : "bg-blue-950 text-white border-blue-600"
                 } rounded-full ${fullWidth && "w-full"} hover:${hoverColor
                     ? `${hoverColor} ${hTextColor} ${hBorderColor}`
-                    : "bg-blue-600 text-white border-blue-950 border-b-2"
+                    : "bg-blue-200 text-white border-blue-950 border-b-2"
                 }`}
+            onClick={onClick}
         >
             {label}
-
+            
             {iconURL && (
                 <img
                     src={iconURL}

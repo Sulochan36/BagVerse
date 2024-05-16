@@ -1,5 +1,6 @@
 import { facebook, instagram, shieldTick, support, truckFast, twitter } from "../assets/icons";
-import { bigShoe1, bigShoe2, bigShoe3, customer1, customer2, shoe4, shoe5, shoe6, shoe7, thumbnailShoe1, thumbnailShoe2, thumbnailShoe3 } from "../assets/images";
+import { bag2,bag6,hand1, hand2,trek2, trek3,suit1} from "../assets/photos/index";
+import { customer1,customer2} from "../assets/images";
 
 export const navLinks = [
     { href: "#home", label: "Home" },
@@ -8,18 +9,18 @@ export const navLinks = [
     { href: "#contact-us", label: "Contact Us" },
 ];
 
-export const shoes = [
+export const bags = [
     {
-        thumbnail: thumbnailShoe1,
-        bigShoe: bigShoe1,
+        thumbnail: bag6,
+        bigBag: bag6,
     },
     {
-        thumbnail: thumbnailShoe2,
-        bigShoe: bigShoe2,
+        thumbnail: hand2,
+        bigBag: hand2,
     },
     {
-        thumbnail: thumbnailShoe3,
-        bigShoe: bigShoe3,
+        thumbnail: trek3,
+        bigBag: trek3,
     },
 ];
 
@@ -31,23 +32,23 @@ export const statistics = [
 
 export const products = [
     {
-        imgURL: shoe4,
-        name: "Nike Air Jordan-01",
+        imgURL: bag2,
+        name: "BackBags",
         price: "$200.20",
     },
     {
-        imgURL: shoe5,
-        name: "Nike Air Jordan-10",
+        imgURL: hand1,
+        name: "Handbags",
         price: "$210.20",
     },
     {
-        imgURL: shoe6,
-        name: "Nike Air Jordan-100",
+        imgURL: trek2,
+        name: "Trekking Bags",
         price: "$220.20",
     },
     {
-        imgURL: shoe7,
-        name: "Nike Air Jordan-001",
+        imgURL: suit1,
+        name: "Trolley Suitcase",
         price: "$230.20",
     },
 ];

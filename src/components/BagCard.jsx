@@ -1,22 +1,23 @@
-const ShoeCard = ({ imgURL, changeBigShoeImage, bigShoeImg }) => {
+const BagCard = ({ imgURL, changeBigBagImage, bigBagImg }) => {
     const handleClick = () => {
-        if (bigShoeImg !== imgURL.bigShoe) {
-            changeBigShoeImage(imgURL.bigShoe);
+        if (bigBagImg !== imgURL.bigBag) {
+            changeBigBagImage(imgURL.bigBag);
         }
     };
 
     return (
         <div
-            className={`border-2 rounded-xl ${bigShoeImg === imgURL.bigShoe
-                    ? "border-blue-600 border-b-4"
+            className={`border-2 rounded-xl cursor-pointer max-sm:flex-1 transition-transform ${bigBagImg === imgURL.bigBag
+                    ? "border-blue-600 border-b-4 shadow-lg scale-125 "
                     : "border-transparent"
-                } cursor-pointer max-sm:flex-1`}
+                } `}
             onClick={handleClick}
+            
         >
             <div className='flex justify-center items-center bg-card bg-center bg-cover sm:w-40 sm:h-40 rounded-xl max-sm:p-4'>
                 <img
                     src={imgURL.thumbnail}
-                    alt='shoe colletion'
+                    alt='bag colletion'
                     width={127}
                     height={103.34}
                     className='object-contain'
@@ -26,4 +27,4 @@ const ShoeCard = ({ imgURL, changeBigShoeImage, bigShoeImg }) => {
     );
 };
 
-export default ShoeCard;
+export default BagCard;
