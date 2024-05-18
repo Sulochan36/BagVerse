@@ -15,14 +15,24 @@ import {
 } from "./sections";
 
 import Home from './pages/Home';
+import { useState } from 'react';
+import LoginPopup from './components/LoginPopup';
 
 //I am trying to commit changes
 const App = () => {
+
+  
+
+
   return (
-    <Routes>
-      <Route exact path="/" element={<Home/>}/>
-      <Route exact path="/explore" element={<Explore />}/>
-    </Routes>
+    <>
+    
+      <Routes>
+        <Route exact path="/" element={<Home />} />
+        <Route exact path="/explore" element={<Explore />} />
+      </Routes>
+    </>
+    
     
       
     

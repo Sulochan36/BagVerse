@@ -1,22 +1,23 @@
-import React, { useState } from 'react'
+import React, { useContext } from 'react'
 import { add_icon_green, add_icon_white, remove_icon_red } from '../assets/photos';
+import { StoreContext } from '../context/StoreContext';
 
 const BagItem = ({ id, name, price, description, image }) => {
 
-    const[itemCount,setItemCount] = useState(0);
-
+    
+    const{cartItems,addToCart,removeFromCart} = useContext(StoreContext);
 
 
     return (
         <div className='w-full m-auto rounded-2xl shadow-xl transition duration-300 animate-[fadeIn_1s] '>
             <div className='relative'>
                 <img className='w-full rounded-t-[15px]' src={image}  />
-                {!itemCount
-                    ? <img className='w-9 absolute bottom-4 right-4 cursor-pointer rounded-full' onClick={()=>setItemCount(prev=>prev+1)} src={add_icon_white} />
+                {!cartItems[id]
+                    ? <img className='w-9 absolute bottom-4 right-4 cursor-pointer rounded-full' onClick={()=>addToCart(id)} src={add_icon_white} />
                     :<div className='absolute bottom-4 right-4 flex items-center gap-[10px] p-[6px] rounded-[50px] bg-white'>
-                        <img className='w-8'  onClick={()=>setItemCount(prev=>prev-1)} src={remove_icon_red} />
-                        <p>{itemCount}</p>
-                        <img className='w-8' onClick={()=>setItemCount(prev=>prev+1)} src={add_icon_green} />
+                        <img className='w-8'  onClick={()=>removeFromCart(id)} src={remove_icon_red} />
+                        <p>{cartItems[id]}</p>
+                        <img className='w-8' onClick={() => addToCart(id)} src={add_icon_green} />
                     </div>
                 }
             </div>

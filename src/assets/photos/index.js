@@ -33,11 +33,13 @@ import trek8 from './trek8.png';
 import add_icon_green from './add_icon_green.png';
 import add_icon_white from './add_icon_white.png';
 import remove_icon_red from './remove_icon_red.png';
+import cross_icon from './cross_icon.png';
 
 export {
     add_icon_green,
     add_icon_white,
     remove_icon_red,
+    cross_icon,
     bag1,
     bag2,
     bag3,
