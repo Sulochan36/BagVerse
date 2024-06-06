@@ -3,7 +3,7 @@ import { bag2,bag6,hand1, hand2,trek2, trek3,suit1} from "../assets/photos/index
 import { customer1,customer2} from "../assets/images";
 
 export const navLinks = [
-    { href: "#home", label: "Home" },
+    { href: "/", label: "Home" },
     { href: "#about-us", label: "About Us" },
     { href: "#products", label: "Products" },
     { href: "#contact-us", label: "Contact Us" },

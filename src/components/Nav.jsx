@@ -1,20 +1,22 @@
 import { hamburger } from "../assets/icons";
 import { logoTrans } from "../assets/images";
 import { navLinks } from "../constants";
-import Button from './Button'
+import Button from './Button';
+import { useNavigate } from "react-router-dom";
+
 
 const Nav = ({setShowLogin}) => {
-
+    const navigate = useNavigate();
     const handleLogin=()=>{
         setShowLogin(true);
     }
 
-
+    
 
 
     return (
-        <header className='bg-black first-line:padding-x py-8 absolute z-10 w-full bg-opacity-85 mb-60'>
-            <nav className='flex justify-between items-center max-container'>
+        <header className='bg-black fixed top-0 left-0 w-full z-10 h-[120px] py-5'>
+            <nav className='flex justify-between items-center max-container h-full'>
                 <a href='/'>
                     <img
                         src={logoTrans}
@@ -36,11 +38,12 @@ const Nav = ({setShowLogin}) => {
                         </li>
                     ))}
                 </ul>
-                <div className='flex gap-2 text-blue-500 text-lg leading-normal font-medium font-montserrat max-lg:hidden wide:mr-24 bg-white rounded-full p-3'>
+                <i onClick={() => navigate("/cart")} className="fa-solid fa-cart-shopping fa-2x cursor-pointer mr-6" style={{color: '#74C0FC'}} ></i>
+                <div className='flex gap-2 text-blue-500 text-lg leading-normal font-medium font-montserrat max-lg:hidden wide:mr-24 '>
                     <Button onClick={handleLogin} label='Sign in' />
                 </div>
                 <div className='hidden max-lg:block'>
-                    <img src={hamburger} alt='hamburger icon' width={25} height={25} />
+                    <img src={hamburger} alt='hamburger icon' width={25} height={25}  />
                 </div>
             </nav>
         </header>

@@ -16,14 +16,14 @@ import {
 //I am trying to commit changes
 const Home = () => {
 
-    const [showLogin, setShowLogin] = useState(false);
+    // const [showLogin, setShowLogin] = useState(false);
 
     return (
         <>
-            {showLogin ? <LoginPopup setShowLogin={setShowLogin} /> : <></>}
+            {/* {showLogin ? <LoginPopup setShowLogin={setShowLogin} /> : <></>} */}
 
             <main className='relative'>
-                <Nav setShowLogin={setShowLogin} />
+                {/* <Nav setShowLogin={setShowLogin} /> */}
                 <section className='xl:padding-l wide:padding-r padding-b'>
                     <Hero />
                 </section>
@@ -45,9 +45,7 @@ const Home = () => {
                 <section className='padding-x sm:py-32 py-16 w-full'>
                     <Subscribe />
                 </section>
-                <section className=' bg-black padding-x padding-t pb-8'>
-                    <Footer />
-                </section>
+                
 
 
             </main>
